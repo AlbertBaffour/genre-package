@@ -7,8 +7,9 @@
     <table class="table">
         <thead>
         <tr>
-            <th class="col-3">Genre</th>
-            <th class="col-6">Description</th>
+            <th class="col-5">Genre</th>
+            <th class="col-2">DWCode</th>
+            <th class="col-2">Enabled</th>
             <th class="col-3"><span class="p-2">Actions</span></th>
         </tr>
         </thead>
@@ -16,7 +17,8 @@
         @foreach($genres as $genre)
             <tr>
                 <td class="text-break">{{ $genre->name}}</td>
-                <td class="text-break">{{ $genre->description }}</td>
+                <td>{{ $genre->dwcode }}</td>
+                <td>{{ $genre->enabled }}</td>
                 <td>
                     <form action="/genre/delete/{{$genre->id}}" method="post">
                         @method('delete')
@@ -31,7 +33,7 @@
                                     class="btn btn-outline-secondary border-0"
                                     data-id="{{$genre->id}}"
                                     data-name="{{$genre->name}}"
-                                    data-description="{{$genre->description}}"
+                                    data-description="{{$genre->dwcode}}"
                                     data-toggle="tooltip"
                                     title="Edit {{ $genre->name }}">
                                 Edit

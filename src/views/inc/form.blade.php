@@ -25,8 +25,10 @@
                class = 'form-control name '
                placeholder = "{{__('genre').'...'}}"
                 value="">
-        {!! Form::label('description', __('Description'),['class' => 'col-form-label mt-2 col-12 font-weight-bold']); !!}
-        {!! Form::textarea('description', old('name'), ['class' => 'form-control  mt-1 ','rows' => 3, 'placeholder' => __('description').'...']) !!}
+        {!! Form::label('dwcode', __('DWCode'),['class' => 'col-form-label mt-2 col-12 font-weight-bold']); !!}
+        {!! Form::text('dwcode', old('dwcode'), ['class' => 'form-control  mt-1 ', 'placeholder' => __('dwcode').'...']) !!}
+        {!! Form::label('enabled', __('Enabled'),['class' => 'col-form-label mt-2 col-12 font-weight-bold']); !!}
+        {!! Form::checkbox('enabled', old('enabled'), ['class' => 'form-control  mt-1 ']) !!}
 
     </div>
     <br>

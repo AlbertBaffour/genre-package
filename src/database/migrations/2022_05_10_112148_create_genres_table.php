@@ -16,7 +16,8 @@ class CreateGenresTable extends Migration
         Schema::create('genres', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
-            $table->string('description')->nullable();
+            $table->smallInteger('dwcode')->nullable(true)->default(NULL);
+            $table->enum('enabled', ['true','false'])->default('true');
             $table->timestamps();
         });
     }

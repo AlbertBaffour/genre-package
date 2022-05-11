@@ -16,10 +16,12 @@ class GenreController extends Controller
     public function store(Request $request){
         $this->validate($request,[
             'name' => 'required|min:2|unique:genres',
+            'dwcode' => 'numeric',
         ]);
         $genre = new Genre();
         $genre->name = $request->name;
-        $genre->description = $request->description;
+        $genre->dwcode = $request->dwcode;
+        $genre->enabled = $request->enabled?'true':'false';
         $genre->save();
         return redirect('genre');
     }
