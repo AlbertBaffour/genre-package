@@ -1,0 +1,28 @@
+{
+    "name": "yarm/genre",
+    "description": "This will be used to manage the genres",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Albert Baffour Awuah",
+            "email": "baffour006@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "laravelcollective/html": "6.x-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yarm\\Genre\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Yarm\\Genre\\GenreServiceProvider"
+            ]
+        }
+    }
+}
