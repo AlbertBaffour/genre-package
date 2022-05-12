@@ -15,7 +15,7 @@ class GenreServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__.'/config/genre.php','genre');
         $this->publishes([
             __DIR__.'/config/genre.php' => config_path('genre.php'),
-           //__DIR__.'/views' => resource_path('views/vendor/genre'),
+           __DIR__.'/views' => resource_path('views/vendor/genre'),
             // Assets
             __DIR__.'/js' => public_path('vendor/genre/js'),
         ],'genre');

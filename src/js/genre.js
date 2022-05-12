@@ -1,4 +1,4 @@
- (function($) {
+ ;(function($) {
      alert('here')
 //add genre
     $(document).on('click',"#btn-add-genre", function() {
@@ -31,7 +31,7 @@
 
     function confirmGenreDelete(id) {
         $.ajax({
-            url: '{{ url('genre') }}/' + id,
+            url: '{{ url("genre") }}/' + id,
             type: 'post',
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')

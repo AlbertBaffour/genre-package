@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
     {{-- Jquery --}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
-
+{{--    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>--}}
+{{--    <script src="js/genre.js"></script>--}}
 
 </head>
 <body>

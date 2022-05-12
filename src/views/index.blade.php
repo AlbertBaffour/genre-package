@@ -9,11 +9,11 @@
 @include('genre::inc.delete_modal')
 @section('js')
     <script type="text/javascript">
-        (function($) {
-        alert('here')
-        document.getElementById("yu").innerHTML = "Hello World!"
+        ;(function($) {
+        alert('t1')
+        $("#yu").innerText = "Hello World!"
         //add genre
-        document.on('click',"#btn-add-genre", function() {
+        $(document).on('click',"#btn-add-genre", function() {
             $('#addEditGenre100').modal('show');
 
         })
