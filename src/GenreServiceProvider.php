@@ -17,7 +17,7 @@ class GenreServiceProvider extends ServiceProvider
             __DIR__.'/config/genre.php' => config_path('genre.php'),
            __DIR__.'/views' => resource_path('views/vendor/genre'),
             // Assets
-            __DIR__.'/js' => public_path('vendor/genre/js'),
+            __DIR__.'/js' => public_path('vendor/js'),
         ],'genre');
     }
 

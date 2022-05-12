@@ -1,5 +1,19 @@
- ;(function($) {
-     alert('here')
+;(function($) {
+        $(document).ready(function() {
+            alert('t1');
+
+            // your code here
+            $("#yuyy").val("Hello World!")
+            $('#btnt').on('click',function (){
+                alert($('#yuyy').val())
+                //document.getElementById("yu").innerText=("btn click")
+                console.log($("#yuyy").val())
+                $('#yuyy').val('new value');
+                console.log($("#yuyy").val())
+            })
+        });
+
+
 //add genre
     $(document).on('click',"#btn-add-genre", function() {
         $('#addEditGenre100').modal('show');
@@ -50,4 +64,4 @@
             }
         });
     }
-}(jQuery));
+}($));
