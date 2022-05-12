@@ -4,7 +4,7 @@
         });
     //add genre
     $(document).on('click',"#btn-add-genre", function() {
-        $('.modal-title-genre').val('Create genre')
+        $('.modal-title-genre').html('Create genre')
         $('#action-type').val('add')
         $('#id').val('')
         $('#name').val('')
@@ -22,7 +22,7 @@
         let dwcode = $(this).data('dwcode');
         let enabled = $(this).data('enabled');
         //form aanpassen
-        $('.modal-title-genre').val('Edit genre')
+        $('.modal-title-genre').html('Edit genre')
         $('#action-type').val('edit')
         $('#id').val(id)
         $('#name').val(name)
