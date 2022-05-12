@@ -22,11 +22,17 @@
         <input id="name"
                type="text"
                name="name"
-               class = 'form-control name '
+               class = 'form-control name {{$errors->has('name')?"in-valid":""}})'
                placeholder = "{{__('genre').'...'}}"
-                value="">
+                value="{{old('name')}}">
+        @if($errors->has('name'))
+            <span class="text-danger small">{{$errors->first('name')}}</span>
+        @endif
         {!! Form::label('dwcode', __('DWCode'),['class' => 'col-form-label mt-2 col-12 font-weight-bold']); !!}
         {!! Form::text('dwcode', old('dwcode'), ['class' => 'form-control  mt-1 ', 'placeholder' => __('dwcode').'...']) !!}
+        @if($errors->has('dwcode'))
+            <span class="text-danger small">{{$errors->first('dwcode')}}</span>
+        @endif
         {!! Form::label('enabled', __('Enabled'),['class' => 'col-form-label mt-2 col-12 font-weight-bold']); !!}
         {!! Form::checkbox('enabled', old('enabled'), ['class' => 'form-control  mt-1 ']) !!}
 

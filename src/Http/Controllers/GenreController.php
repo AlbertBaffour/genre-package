@@ -4,6 +4,7 @@ namespace Yarm\Genre\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use Yarm\Genre\Models\Genre;
 
 class GenreController extends Controller
@@ -14,10 +15,13 @@ class GenreController extends Controller
 
     }
     public function store(Request $request){
-        $this->validate($request,[
+        $validator =Validator::make($request->all(),[
             'name' => 'required|min:2|unique:genres',
             'dwcode' => 'numeric',
         ]);
+        if($validator->fails()){
+            return redirect('genre')->withErrors($validator)->withInput();
+        }
         $genre = new Genre();
         $genre->name = $request->name;
         $genre->dwcode = $request->dwcode;

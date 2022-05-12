@@ -11,7 +11,8 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "laravelcollective/html": "*"
+        "laravelcollective/html": "*",
+        "jQuery"
     },
     "autoload": {
         "psr-4": {
