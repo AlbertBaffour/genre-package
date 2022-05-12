@@ -3,12 +3,12 @@
             alert('t1');
 
             // your code here
-            $("#yuyy").val("Hello World!")
+            $("#yuyy").val("Hello World!2")
             $('#btnt').on('click',function (){
                 alert($('#yuyy').val())
                 //document.getElementById("yu").innerText=("btn click")
                 console.log($("#yuyy").val())
-                $('#yuyy').val('new value');
+                $('#yuyy').val('new value2');
                 console.log($("#yuyy").val())
             })
         });
