@@ -29,11 +29,12 @@
 {{--                               title="Clean {{ $genre->name }}">--}}
 {{--                                Clean--}}
 {{--                            </a>--}}
-                            <button type="button" data-redirect="{{$genres->currentPage()}}" id="edit-genre"
+                            <button type="button" data-redirect="{{$genres->currentPage()}}" id="btn-edit-genre"
                                     class="btn btn-outline-secondary border-0"
                                     data-id="{{$genre->id}}"
                                     data-name="{{$genre->name}}"
-                                    data-description="{{$genre->dwcode}}"
+                                    data-dwcode="{{$genre->dwcode}}"
+                                    data-enabled="{{$genre->enabled}}"
                                     data-toggle="tooltip"
                                     title="Edit {{ $genre->name }}">
                                 Edit

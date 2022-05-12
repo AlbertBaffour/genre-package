@@ -9,7 +9,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                Do you really want to delete genre:<b><span id="modal-genre-name"></span></b>?
+                Do you really want to delete genre: <b><span id="modal-genre-name"></span></b>?
                 <input type="hidden" id="modal-genre-id" name="modal-genre-id">
             </div>
             <div class="modal-footer">

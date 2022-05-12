@@ -20,14 +20,29 @@ class GenreController extends Controller
             'dwcode' => 'numeric',
         ]);
         if($validator->fails()){
-            return redirect('genre')->withErrors($validator)->withInput();
+            return response()->json(['errors'=>$validator->errors()->all()]);
         }
         $genre = new Genre();
         $genre->name = $request->name;
         $genre->dwcode = $request->dwcode;
         $genre->enabled = $request->enabled?'true':'false';
         $genre->save();
-        return redirect('genre');
+        return response()->json(['success'=>'Genre created successfully']);
+    }
+    public function update(Request $request){
+        $validator =Validator::make($request->all(),[
+            'name' => 'required|min:2',
+            'dwcode' => 'numeric',
+        ]);
+        if($validator->fails()){
+            return response()->json(['errors'=>$validator->errors()->all()]);
+        }
+        $genre = Genre::find($request->id);
+        $genre->name = $request->name;
+        $genre->dwcode = $request->dwcode;
+        $genre->enabled = $request->enabled?'true':'false';
+        $genre->save();
+        return response()->json(['success'=>'Genre updated successfully']);
     }
     public function destroy($id){
         try {
