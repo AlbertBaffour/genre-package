@@ -38,8 +38,9 @@
                                     title="Edit {{ $genre->name }}">
                                 Edit
                             </button>
-                            <button type="submit" id="delete-genre" class="btn btn-outline-danger border-0"
-{{--                                    onclick="loadGenreDeleteModal({{ $genre->id }}, `{{ $genre->name }}`)"--}}
+                            <button type="button" id="delete-genre" class="btn btn-outline-danger border-0"
+                                    data-id="{{$genre->id}}"
+                                    data-name="{{$genre->name}}"
                                     data-toggle="tooltip"
                                     title="Delete {{ $genre->name }}">
                                 Delete

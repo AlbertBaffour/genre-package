@@ -1,6 +1,6 @@
 ;(function($) {
         $(document).ready(function() {
-            alert('t1');
+           // alert('t1');
 
             // your code here
             $("#yuyy").val("Hello World!2")
@@ -11,7 +11,7 @@
                 $('#yuyy').val('new value2');
                 console.log($("#yuyy").val())
             })
-        });
+
 
 
 //add genre
@@ -35,13 +35,14 @@
     $(document).on('click',"#btn-update-genre", function() {
 
     });
+        });
 
 //delete
-    function loadGenreDeleteModal(id, name) {
-        $('#modal-genre-name').html(name);
-        $('#modal-confirm-genre-delete').attr('onclick', `confirmGenreDelete(${id})`);
+    $(document).on('click','#delete-genre',function () {
+        $('#modal-genre-name').html($(this).data('name'));
+        $('#modal-confirm-genre-delete').attr('onclick', `confirmGenreDelete(${$(this).data('id')})`);
         $('#deleteGenre100').modal('show');
-    }
+    });
 
     function confirmGenreDelete(id) {
         $.ajax({

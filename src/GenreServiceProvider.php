@@ -19,6 +19,10 @@ class GenreServiceProvider extends ServiceProvider
             // Assets
             __DIR__.'/js' => public_path('vendor/js'),
         ],'genre');
+
+
+        //after every update
+        //run   php artisan vendor:publish [--provider="Yarm\Genre\GenreServiceProvider"][--tag="genre"]  --force
     }
 
     public function register()
