@@ -6,7 +6,7 @@
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
-        <button class="btn btn-outline-success" id="btn-add-genre">Create genre</button>
+        <button class="btn btn-outline-success" id="btn-add-genre">Create genre :</button>
         <br><br>
         @include('genre::inc.table')
 
